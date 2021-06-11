@@ -17,8 +17,8 @@ export default function Home() {
         <h1>index page</h1>
         <ul>
           <li>Link: {link}</li>
-          <li><a href={`/${link}`}>Link to url</a></li>
-          <li><a href={`/?uid=${link}`}>Link to redirect</a></li>
+          <li><a href={`/${link}`}>Link to url</a> {`/${link}`}</li>
+          <li><a href={`/?uid=${link}`}>Link to redirect</a> {`/?uid=${link}`}</li>
         </ul>
 
 
