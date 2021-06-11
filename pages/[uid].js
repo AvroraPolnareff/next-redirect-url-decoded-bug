@@ -1,10 +1,11 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Link from 'next/link'
+import styles from "../styles/Home.module.css";
+import Head from "next/head";
+import Link from "next/link";
+import {useRouter} from "next/router";
 
-export default function Home() {
+const UidPage = () => {
   const link = encodeURIComponent("//[]()?");
+  const { query } = useRouter();
   return (
     <div>
       <Head>
@@ -14,16 +15,14 @@ export default function Home() {
       </Head>
 
       <main>
-        <h1>index page</h1>
+        <h1>[UID] Page</h1>
         <ul>
-          <li>Link: {link}</li>
+          <li>Query: {query.uid}</li>
           <li><a href={`/${link}`}>Link to url</a></li>
           <li><a href={`/?uid=${link}`}>Link to redirect</a></li>
         </ul>
-
-
-
       </main>
     </div>
   )
 }
+export default UidPage;
